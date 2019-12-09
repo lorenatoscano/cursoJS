@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos com DOM</title>
+    <style>
+    body {
+        background-color: rgb(92, 126, 182);
+        color: white;
+        font: normal 18pt Arial;
+    }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript.</p>
+    <div class="msg">Clique em mim</div>
+
+    <script>
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[1] //'Elements' => precisa indicar qual elemento
+       
+        p1.style.color = 'Blue'
+        //innerText pega o texto sem as childs
+        //innerHTML pega todo o texto com as childs
+        /*
+        var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando'
+        document.getElementById('msg').innerText = 'Olá!'
+        */
+
+        var d = document.querySelector('div.msg')
+        d.style.color = 'blue'
+    </script>
+</body>
+</html>
