@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background: rgb(8, 16, 88);
+            font: normal 18pt Arial;
+            color: white;
+        }
+        input {
+            font: normal 20 pt Arial;
+            border-radius: 3px;
+        }
+        div#res {
+            margin-top: 40 px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de brasilidade</h1>
+    País de origem: <input type="text" name="pais" id="pais">
+    <input type="button" onclick="verificar()" value="Verificar" id="botao">
+    <div id="res"></div>
+    
+
+    <script>
+        function verificar() {
+            var pais = document.getElementById('pais')
+            var res = document.getElementById('res')
+            
+            res.innerHTML += `Vivendo em ${pais.value} <br>`
+            if (pais.value == 'Brasil' || pais.value == 'brasil') {
+                res.innerHTML += 'Você é brasileiro!'
+            }
+            else {
+                res.innerHTML += 'Você é estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>
